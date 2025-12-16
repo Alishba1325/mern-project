@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tumhara existing CSS yaha niche rahe */
+body {
+  /* Using the color defined via Tailwind utility class (bg-dark-bg) 
+     on the main div in Landing.js is generally better, but setting a base 
+     background here is also safe. */
+  font-family: Inter, Arial, sans-serif;
+  margin: 0;
+  background: #0d1114; 
+  color: #eee;
+}
+body { font-family: Inter, Arial, sans-serif; margin:0; background:#111; color:#eee; }
+.container{ max-width:1100px; margin:40px auto; padding:20px; }
+.hero{ background:linear-gradient(90deg,#071426 0%, #0f1b24 60%); padding:80px 20px; text-align:center; border-radius:12px; }
+.hero h1{ font-size:48px; margin:0 0 16px; }
+.btn{ display:inline-block; padding:12px 20px; border-radius:8px; background:#00aaff; color:#fff; text-decoration:none; }
+.card-grid{ display:flex; gap:18px; margin-top:30px; flex-wrap:wrap; justify-content:center;}
+.card{ background:#0d1114; padding:18px; border-radius:10px; width:300px; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+.form-center{ background:linear-gradient(180deg,#071426,#0b0f13); padding:24px; border-radius:12px; width:420px; margin:40px auto; color:#ddd;}
+input, textarea{ width:100%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #222; background:#081016; color:#ddd;}
+.nav{ display:flex; justify-content:space-between; align-items:center; padding:16px; background:#06080a; border-radius:8px;}
+@media (max-width:768px){ .hero h1{ font-size:28px } .card{ width:100%; } .form-center{ width:95%; } }
+/* Custom CSS for the Radial Glow Effect (Check your CSS file) */
+.bg-radial-glow {
+  /* This creates the radial gradient (blue/cyan center fading to dark, positioned to simulate side glow) */
+  background-image: radial-gradient(at 50% 0%, rgba(0, 186, 255, 0.1), transparent 70%),
+                    radial-gradient(at 0% 100%, rgba(0, 186, 255, 0.1), transparent 70%),
+                    radial-gradient(at 100% 100%, rgba(0, 186, 255, 0.1), transparent 70%);
+  background-repeat: no-repeat;
+}
+
+/* Ensure the dark background color is also defined, typically in tailwind.config.js */
+.bg-dark-bg {
+    background-color: #0D1114; /* A deep black/dark gray */
+}
+
+.bg-card-bg {
+    background-color: #1A1E22; /* A slightly lighter shade for cards and the header box */
+}
+
+.text-primary-blue {
+    color: #00BAFF;
+}

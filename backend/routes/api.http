@@ -1,0 +1,16 @@
+### Test API
+GET http://localhost:5000
+
+
+### Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "123456"
+}
+
+### Dashboard
+GET http://localhost:5000/api/dashboard
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NDE0YjViYjhjYWJiOTczYTM4NWNmMCIsImlhdCI6MTc2NTkxMjIzNSwiZXhwIjoxNzY2NTE3MDM1fQ._jr-DWWUeC2S3ivwQAM7X3_JPuD6FBdsX0VC454pETk
